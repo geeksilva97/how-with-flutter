@@ -11,5 +11,4 @@ Below you can see available demos
 - **[Local Notitifcations](https://github.com/geeksilva97/how-with-flutter/tree/master/local_notifications_demo)**
 
     This demo show how use [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) package.
-
     In this demo you can see the usage with custom Icon.

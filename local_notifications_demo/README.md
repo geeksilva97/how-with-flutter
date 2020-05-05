@@ -1,8 +1,35 @@
-# local_notifications_demo
+# Local Notifications 
 
-A new Flutter project.
+This project is a demo usage of Local Notifications with custom icon. It was created 
 
-## Getting Started
+## Prepare to run
+
+To run this project you need to install all packages using `flutter packages get`.
+
+## Custom Icons
+
+Notifications are awesome when we can use our icons. In this project you can see the definition of custom icons at `android/app/main/res`.
+
+In this folder, you can see a subfolder called `drawable` inside of it you will see our icon called `ic_stat_adb.png`.
+
+In addition to `drawable`, you can see other subfolders like` drawable- *`.
+
+Each folder has a icon with one density. 
+
+More informations see
+
+- https://developer.android.com/guide/topics/resources/providing-resources
+- https://developer.android.com/studio/write/image-asset-studio#notification
+
+The icons present here were generated with [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/)
+
+## Changes icons
+
+To add your icons, you need to replace the current `ic_stat_adb.png` in at least the drawable folder and add your new icon name to ` main.dart`
+
+## Getting Started with Flutter
+
+Run it with `flutter run` or with you favorite IDE to run
 
 This project is a starting point for a Flutter application.
 
