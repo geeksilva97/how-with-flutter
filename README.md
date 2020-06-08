@@ -13,6 +13,6 @@ Below you can see available demos
     This demo show how use [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) package.
     In this demo you can see the usage with custom Icon.
 
-- **[BLoC Cart Demo](https://github.com/geeksilva97/how-with-flutter/tree/master/bloc_lne_by_line)**
+- **[BLoC Cart Demo](https://github.com/geeksilva97/how-with-flutter/tree/master/bloc_line_by_line)**
 
     This demo is a Shopping App that uses pure BLoC (from Google I/O 2018 and DartConf 2017). The code presented here was developed for a tutorial. This is very simple to understando and pratice.
