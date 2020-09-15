@@ -1,8 +1,9 @@
 class Product {
   final int id;
   final String name;
+  final double price;
 
-  Product(this.id, this.name);
+  Product(this.id, this.name, this.price);
 
    @override
   int get hashCode => id;

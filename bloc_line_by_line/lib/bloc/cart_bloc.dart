@@ -1,33 +1,31 @@
 import 'dart:async';
 
 import 'package:bloc_line_by_line/bloc/cart_addition.dart';
-
-import 'cart.dart';
-
-/**
- * Serve como Controller, gerenciano as entradas e saídas
- */
+import 'package:bloc_line_by_line/models/cart.dart';
 
 class CartBloc {
-  final Cart _cart = Cart();
-  final StreamController<CartAddition> _cartAdditionController = StreamController<CartAddition>();
-  final StreamController<int> _itemCountController = StreamController<int>.broadcast();
+  final _cart = Cart();
+  StreamController<CartAddition> _cartAdditionController =
+      StreamController<CartAddition>();
+  StreamController<int> _itemCountController = StreamController<int>();
+  StreamController<double> _totalController = StreamController<double>();
+
+  // entrada de dados
+  Sink<CartAddition> get cartAddition => _cartAdditionController.sink;
+
+  // saída de dados
+  Stream<int> get itemCount => _itemCountController.stream;
 
   CartBloc() {
-    _cartAdditionController.stream.listen((cartAddition) {
-      _cart.addItem(cartAddition.product);
+    _cartAdditionController.stream.listen((event) {
+      _cart.addItem(event.product);
       _itemCountController.sink.add(_cart.itemCount);
-      print('${cartAddition.product}');
-      print('${_cart.itemCount} itens');
+      print('O carrinho tem ${_cart.itemCount} itens');
     });
   }
 
-  Sink<CartAddition> get cartAddition => _cartAdditionController.sink;
-  Stream<int> get itemStream => _itemCountController.stream;
-  
   void dispose() {
     _cartAdditionController.close();
     _itemCountController.close();
   }
-
 }

@@ -13,7 +13,7 @@ class Cart {
   int get itemCount => _items.length;
 
   void addItem(Product product) {
-    _items.add(CartItem(0, product));
+    _items.add(CartItem(1, product));
   }
 
   void removeItem(Product product) {
@@ -21,7 +21,5 @@ class Cart {
     if(productToRemove != null) _items.remove(productToRemove);
   }
 
-  void _updateCount() {
-
-  }
+ 
 }

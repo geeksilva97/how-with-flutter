@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CartProvider(
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: '@edigleyssonsilva',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
